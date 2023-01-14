@@ -14,26 +14,24 @@ do
     3 - Test false task.GetAwaiter().GetResult();    
     4 - Test async task.Wait();    
     5 - Test async task.GetAwaiter().GetResult();
+    6 - Test Object reference, and value reference;
     ");
 
     menu = int.Parse(Console.ReadLine());
 
     switch (menu)
     {
-        case 1:
-            new UnhandledError().DivisaoPorZero();
+        case 1: new UnhandledError().DivisaoPorZero();
             break;
-        case 2:
-            new FalseTask().CallFalseTask().Wait();
+        case 2: new FalseTask().CallFalseTask().Wait();
             break;
-        case 3:
-            new FalseTask().CallFalseTask().GetAwaiter().GetResult();
+        case 3: new FalseTask().CallFalseTask().GetAwaiter().GetResult();
             break;
-        case 4:
-            new AsyncTask().CallTask().Wait();
+        case 4: new AsyncTask().CallTask().Wait();
             break;
-        case 5:
-            new AsyncTask().CallTask().GetAwaiter().GetResult();
+        case 5: new AsyncTask().CallTask().GetAwaiter().GetResult();
+            break;
+        case 6: ValueAndREferenceObjects.ManagaListsObjects();
             break;
         default: break;
     }
